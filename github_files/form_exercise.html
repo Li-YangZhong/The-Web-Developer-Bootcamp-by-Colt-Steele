@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Register</h1>
+    <form action="">
+        <!-- name attribute is the name of the input form control. Submitted with the form as part of a name/value pair. -->
+
+        <!-- To associate the <label> with an <input> element, you need to give the <input> an id attribute. The <label> then needs a for attribute whose value is the same as the input's id.
+
+Alternatively, you can nest the <input> directly inside the <label>, in which case the for and id attributes are not needed because the association is implicit: -->
+
+
+        <label for="first_name">First Name:</label>
+        <input id="first_name" name="first_name" type="text" placeholder="John" required>
+
+        <label for="last_name">last Name:</label>
+        <input name="last_name" type="text" placeholder="Smith" required>
+        <br>
+
+        <label for="male">Male:</label>
+        <input name="genderChoice" id="male" type="radio" value="MALE">
+        <label for="female">Female:</label>
+        <input name="genderChoice" id="female" type="radio" value="FEMALE">
+        <label for="other">Other:</label>
+        <input name="genderChoice" id="other" type="radio" value="OTHER">
+        <br>
+
+
+        <label>
+            Email:
+            <input name="email" type="email" placeholder="your email" required>
+        </label>
+
+        <label>
+            Password:
+            <input name="password" type="password" required pattern=".{5,10}" title="5 to 10 characters">
+        </label>
+
+        <br>
+
+        <label>
+            Birthday:
+            <select name="month" id="">
+                    <option value="">Month</option>
+                    <option value="JAN">Jan</option>
+                    <option value="FEB">Feb</option>
+                    <option value="MAR">Mar</option>
+                </select>
+                <select name="day" id="">
+                    <option value="">Day</option>
+                    <option value="ONE">1</option>
+                    <option value="TWO">2</option>
+                    <option value="THREE">3</option>
+                </select>
+                <select name="year" id="">
+                    <option value="">Year</option>
+                    <option value="year2018">2018</option>
+                    <option value="year2019">2019</option>
+                    <option value="year2020">2020</option>
+                </select>
+
+        </label>
+
+        <br>
+        <label for="agreed">I agree to the terms and conditions: </label>
+        <input type="checkbox" id="agreed" name="agreed" checked>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

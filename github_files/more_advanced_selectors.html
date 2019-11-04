@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            border: 1px solid lightgrey;
+        }
+
+        /* descendant selectors; selecting all a elements that is inside li element */
+
+        li a {
+            color: red;
+        }
+
+        /* adjacent selectors; all ul adjacent to h4 */
+
+        h4 + ul {
+            border: 4px solid red;
+        }
+
+        /* attribute selector */
+
+        a[href="http://www.google.com"] {
+            background: blue;
+        }
+
+        /* nth of type */
+        ul:nth-of-type(3) {
+            background-color:purple;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Selector Demo</h1>
+    <a href="http://www.google.com">Click Me For Google</a>
+    <ul>
+        <li>Apples</li>
+        <li>Oranges</li>
+        <li>Bananas</li>
+    </ul>
+
+    <h4>Popular Sites</h4>
+
+    <ul>
+        <li>Carrots</li>
+        <li>Peas</li>
+        <li>Asparagus</li>
+    </ul>
+
+    <h4>Popular Sites</h4>
+
+    <ul>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.reddit.com">Reddit</a></li>
+    </ul>
+</body>
+</html>

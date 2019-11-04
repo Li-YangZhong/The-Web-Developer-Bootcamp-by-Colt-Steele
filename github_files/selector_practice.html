@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* specificity: 2 */
+        div p {
+            color: red;
+            text-transform: uppercase;
+        }
+
+        div p::first-letter {
+            font-size: 40px;
+        }
+
+        div p:hover {
+            text-decoration: underline;
+        }
+/* specificity: 3 */
+        div div p {
+            color: blue;
+        }
+
+/* select direct children */
+        div:nth-of-type(2) > p {
+            background-color: yellow;
+        }
+
+        input:checked {
+            margin-left: 50px;
+        }
+
+        a:visited {
+            color:grey;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque a quaerat, similique ex debitis ea! Ullam magnam tempora ducimus quos beatae ea! Necessitatibus dolorum saepe, minima ipsam ea voluptatem minus. Non maxime hic, quae repellendus voluptates suscipit eaque adipisci.</p>
+    </div>
+
+    <div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. Aliquam voluptatem expedita illo unde. Similique, eligendi nihil eveniet laborum voluptas magnam veniam omnis repudiandae tempore? Earum sit, quasi obcaecati dicta dolore maxime perspiciatis saepe, impedit quibusdam aspernatur perferendis corporis.</p>
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque deserunt qui saepe eligendi ipsam obcaecati tempore voluptate libero repellat asperiores?</p>
+    </div>
+
+<label for="">Checkbox:
+
+        <input type="checkbox">
+</label>
+<br>
+<label for="">Another Checkbox:
+
+        <input type="checkbox">
+</label>
+
+<a href="http://www.baidu.com">BAIDU.COM</a>
+
+</body>
+</html>

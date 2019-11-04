@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <style>
+        /* https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+
+        #unorderedlist * {
+            border: 1px dotted black;
+        }
+
+        div p {
+            color: red;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visted {
+            color: purple;
+        }
+
+        /* 7. X + Y
+
+
+This is referred to as an adjacent selector. It will select only the element that is immediately preceded by the former element.  */
+
+        div+p {
+            color: red;
+        }
+
+        /* select direct children */
+        #container>ul {
+            border: 1px solid #000;
+        }
+        /* select all elements following another element */
+    div ~ p {
+        text-decoration:underline;
+    }
+    /* attribute selector */
+    a[title] {
+        color: green;
+    }
+    a[title="title-2"] {
+        background-color: yellow;
+    }
+/*  The star designates that the proceeding value must appear somewhere in the attribute's value. */
+    a[href*="tuts"] {
+        border: 1px solid #000; /* nettuts green */
+      }
+      /* target all anchor tags that have a href which begins with http */
+      a[href^="http"] {
+        text-decoration: line-through;
+      } 
+      a[href$=".jpg"] {
+         text-decoration-line: underline;
+         text-decoration-style:wavy;
+      }
+
+      a[data-filetype="image"] {
+      color: blue;
+    }
+    /*  */
+
+    a[data-info~="external"] {
+   color: purple;
+}
+
+a[data-info~="image"] {
+   border: 3px solid black;
+}
+/*  */
+input[type=checkbox]:checked + label{
+   border: 1px solid black;
+}
+/*  */
+div:not(.preference) {
+    border: 1px solid red;
+}
+
+p::first-letter {
+   float: left;
+   font-size: 2em;
+   font-weight: bold;
+   font-family: cursive;
+   padding-right: 2px;
+}
+
+li:nth-child(2) {
+   color: red;
+}
+
+li:nth-last-child(1) {
+   background-color: yellow;
+}
+
+ul:nth-of-type(2) {
+   border: 1px dashed yellow;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p> My paragraph here. </p>
+        <ul id="unorderedlist">
+            <li> List Item 1</li>
+            <li> List Item 2</li>
+        </ul>
+
+        <ul>
+            <li> List Item 3</li>
+            <li> List Item 4</li>
+        </ul>
+    </div>
+
+    <p> Paragraph outside of div </p>
+    <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a> elit, sed do eiusmod <a
+            href="http://net.tutsplus.com">tempor</a> incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <!--  -->
+    <div id="container">
+        <ul>
+            <li> List Item
+                <ul>
+                    <li> Child </li>
+                </ul>
+            </li>
+            <li> List Item </li>
+            <li> List Item </li>
+            <li> List Item </li>
+        </ul>
+    </div>
+    <!--  -->
+    <p> Lorem ipsum dolor sit amet, <a href="#" title="title-1">first anchor</a> adipisicing elit, sed do eiusmod <a href="#" title="title-2">second anchor</a> adipisicing elit tempor. </p>
+<!--  -->
+    <p> Lorem ipsum dolor sit amet, <a href="#" title="Some title">consectetur</a> adipisicing elit, sed do <a href="http://nettuts.com">Nettuts</a> tempor. </p>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+    <p> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a> elit, sed do eiusmod tempor. </p>
+    <p> Lorem ipsum <a href="https://net.tutsplus.com">Nettuts+</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+
+<!--  -->
+<p> Lorem ipsum <a href="http://net.tutsplus.com">Nettuts+</a> sit amet, consectetur "<a href="http://d2o0t5hpnwv4c1.cloudfront.net/839_git/preview.jpg">Getting Good with Git</a>" elit, sed do eiusmod tempor. </p>
+<!--  -->
+<p> Lorem ipsum dolor sit amet, <a href="#" title="Some title">consectetur</a> adipisicing elit, sed do <a href="http://nettuts.com">Nettuts</a> tempor. </p>
+<p> <a href="http://d2o0t5hpnwv4c1.cloudfront.net/817_rubyNewbies1/preivew.png" data-filetype="image">PNG Image</a> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. </p>
+<p> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a> elit, sed do eiusmod tempor. </p>
+<p> Lorem ipsum <a href="http://net.tutsplus.com">Nettuts+</a> sit amet, consectetur "<a href="http://d2o0t5hpnwv4c1.cloudfront.net/839_git/preview.jpg" data-filetype="image">Getting Good with Git</a>" elit, sed do eiusmod tempor. </p>
+<hr>
+<p> Lorem ipsum dolor sit amet, <a href="http://www.google.com" data-info="external" title="Some title">consectetur</a> adipisicing elit, sed do 
+<p> Lorem ipsum <a href="http://net.tutsplus.com">Nettuts+</a> sit amet, consectetur "<a href="http://d2o0t5hpnwv4c1.cloudfront.net/839_git/preview.jpg" data-info="external image">Getting Good with Git</a>" elit, sed do eiusmod tempor. </p>
+<hr>
+<div class="preference">
+
+        <input type="checkbox" name="cheese" id="cheese">
+        <label for="cheese">Do you like cheese?</label>
+    </div>
+</body>
+
+</html>
