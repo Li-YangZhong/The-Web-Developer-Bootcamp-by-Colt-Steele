@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // 114.9._Scope_Code_Along.mp4
+        function doMath() {
+            var x = 40;
+            console.log(x);
+        }
+
+        doMath();
+
+        // console.log(x); //reference error; x is not defined
+
+        var y = 99;
+
+        function doMoreMath() {
+            console.log(y);
+        }
+
+        doMoreMath(); //99
+
+        function doMoreMath1() {
+            y = 100; //redefine the global variable outside function doMoreMath1() from 99 to 100
+            console.log(y);
+        }
+        
+        doMoreMath1();//100
+
+        console.log(y);//100
+
+        //====================
+
+        var phrase = "hi there!";
+
+        function doSomething() {
+            var phrase = "Goodbye!";
+            console.log(phrase);
+        }
+
+        doSomething();//"Goodbye!"
+        console.log(phrase);//"hi there"
+
+        //115.10._Scope_Quiz.mp4
+        var num = 8;
+        function doAnotherMath() {
+            num += 1;
+            if(num % 5 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        num += 1;
+        console.log(doAnotherMath()); //true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
