@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var dog = {
+            name: "Rusty",
+            breed: "Mutt",
+            age: 3
+        }
+        
+        //looking up an object's property value
+        console.log(dog.age);
+
+        console.log(dog["age"]);
+
+        var property_name = "age";
+        console.log(dog[property_name]);
+
+        //updating an object
+        dog.age += 1;
+
+        console.log(dog.age);
+
+        //add a new property to an object
+        dog.color = "black";
+        console.log(dog);
+
+    </script>
+    <title>sumArray()</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

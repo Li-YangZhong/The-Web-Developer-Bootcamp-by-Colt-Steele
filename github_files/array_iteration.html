@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var colors = ["red", "orange", "yellow", "green"];
+
+        for(var i = 0; i < colors.length; i++) {
+            console.log(colors[i]);
+        }
+
+        console.log("------------------");
+
+        colors.forEach(function(color) {
+            console.log("the " + colors.indexOf(color) + " item in the array is " + color);
+        })
+
+        console.log("------------------");
+
+        function printColor(color) {
+            console.log("*********")
+            console.log(color);
+            console.log("*********")
+        }
+
+         colors.forEach(printColor);
+
+         console.log("------------------");
+
+var count = 0;
+while(count < colors.length) {
+    console.log(colors[count]);
+    count++;
+}
+    </script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <ul>
+        <li>"new" - Add A Todo</li>
+        <li>"list" - View All todos</li>
+        <li>"quit" - Quit App</li>
+    </ul>
+
+</body>
+
+</html>

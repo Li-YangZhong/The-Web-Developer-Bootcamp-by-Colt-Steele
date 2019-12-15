@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var todos = ["buy new turtule"];
+
+        var input = prompt("What would you like to do?");
+
+
+
+        while (input !== "quit") {
+            //handle input
+            if (input === "list") {
+                listTodos();
+
+            } else if (input === "new") {
+                addTodo();
+            } else if (input === "delete") {
+                deleteTodo();
+            }
+
+            //ask again for new input
+            input = prompt("What would you like to do?");
+        }
+
+        console.log("OK, YOU QUIT THE APP");
+
+        function listTodos() {
+            console.log("**********");
+            todos.forEach(function (todo, i) {
+                console.log(i + ": " + todo);
+            });
+            console.log("**********");
+        }
+
+        function addTodo() {
+            //ask for new todo
+            var newTodo = prompt("Enter new todo");
+            //add to todos array
+            todos.push(newTodo);
+            console.log("Added Todo");
+        }
+
+        function deleteTodo() {
+            //ask for index of todo to be deleted
+            var index = prompt("Enter index of todo to delete");
+            //delete that todo
+            //splice()
+            todos.splice(index, 1); //delete starting from position index 1 item only
+            console.log("Deleted Todo");
+        }
+    </script>
+    <title>Todo List</title>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <ul>
+        <li>"new" - Add A Todo</li>
+        <li>"list" - View All todos</li>
+        <li>"delete" - Remove a Specific Todo</li>
+        <li>"quit" - Quit App</li>
+    </ul>
+
+</body>
+
+</html>
