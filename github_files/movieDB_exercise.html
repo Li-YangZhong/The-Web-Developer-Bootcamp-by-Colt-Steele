@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var movies = [
+            {
+                title: "In Bruges",
+                hasWatched: true,
+                rating: 5
+            },
+            {
+                title: "Frozen",
+                hasWatched: false,
+                rating: 4.5
+            }
+        ];
+
+        movies.forEach(function(movie) {
+            console.log(buildString(movie));
+        });
+
+        function buildString(movie) {
+            var result = "You have ";
+            if(movie.hasWatched) {
+                result += "watched ";
+            } else {
+                result += "not seen ";
+            }
+            result += "\"" + movie.title + "\" - ";
+            result += movie.rating + " stars";
+            return result;
+        }
+
+
+
+    </script>
+    <title>sumArray()</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
