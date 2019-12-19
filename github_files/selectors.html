@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Selectors Intro</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+    <ul>
+        <li id="highlight">List Item 1</li>
+        <li class="bolded">List Item 2</li>
+        <li class="bolded">List Item 3</li>
+    </ul>
+
+    <script>
+        var tag = document.getElementById("highlight");
+        console.log(tag);
+        console.dir(tag);    
+
+        var tags = document.getElementsByClassName("bolded");
+        console.log(tags);
+        console.dir(tags[0]);
+
+        var tags2 = document.getElementsByTagName("li");
+        console.log(tags2);
+
+        //querySelector only return the first element that matches a given CSS-style selector.
+
+        var tag_querySelector = document.querySelector(".bolded");
+        console.log(tag_querySelector);
+
+        //select by class
+
+        var tag_querySelectorAll = document.querySelectorAll(".bolded");
+        console.log(tag_querySelectorAll);
+
+
+    </script>
+</body>
+
+</html>
