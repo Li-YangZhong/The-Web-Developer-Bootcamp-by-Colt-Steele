@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .big {
+            font-size: 100px;
+            color: orange;
+            border: 5px solid red;
+        }
+    </style>
+    <title>Selector Exercise</title>
+</head>
+
+<body>
+    <h1>Welcome to MY DOM Demo</h1>
+    <p>"Corgi mixes are <strong>super</strong> adorable"
+    </p>
+
+    <a href="http://www.google.com">LINK TO GOOGLE.COM</a>
+    <ul>
+        <li>Orchids</li>
+        <li>Succulents</li>
+        <li>Tulips</li>
+    </ul>
+
+    <img src="http://placehold.it/480x480" alt="" >
+    <img src="http://placehold.it/550x550" alt="" >
+
+
+    <script>
+        var h1 =document.querySelector("h1");
+        h1.style.color = "yellow";
+        h1.style.border = "5px solid pink";
+        
+        var p = document.querySelector("p");
+        console.log(p.classList);
+        // p.classList.add("big");
+        // p.classList.remove("big");
+        // p.classList.toggle("big"); //classList is not an array
+
+        console.log(p.textContent); //textContent extract only text
+        console.log(p.innerHTML);//innerHTML extract text and HTML tags
+
+
+        var ul = document.querySelector("ul");
+
+        console.log(ul.textContent);
+        console.log(ul.innerHTML);
+
+        // document.querySelector("h1").textContent= "END OF THIS LESSON！";
+
+        // console.log(document.body.innerHTML);
+        // console.log(document.body.textContent);
+
+        // document.body.textContent = "<h1> Goodbye!</h1>";
+        // document.body.innerHTML = "<h1> Goodbye!</h1>";
+
+        var img1 = document.getElementsByTagName("img")[0];
+
+        console.log(img1.getAttribute("src"));
+        console.log(img1.setAttribute("src", "https://i2.hdslb.com/bfs/archive/02171ee37277947116c5c47cd7f624fa06035756.jpg@380w_240h_100Q_1c.webp"));
+
+        
+        var a = document.querySelector("a");
+        a.textContent = "LINK TO BING.COM";
+        a.setAttribute("href", "http://www.bing.com");
+
+    </script>
+</body>
+
+</html>
