@@ -27,15 +27,23 @@
         <li>Tulips</li>
     </ul>
 
-    <img src="http://placehold.it/480x480" alt="" >
-    <img src="http://placehold.it/550x550" alt="" >
+    <img src="http://placehold.it/480x480" alt="">
+    <img src="http://placehold.it/550x550" alt="">
 
 
     <script>
-        var h1 =document.querySelector("h1");
-        h1.style.color = "yellow";
-        h1.style.border = "5px solid pink";
-        
+        var h1 = document.querySelector("h1");
+        // h1.style.color = "yellow";
+        // h1.style.border = "5px solid pink";
+
+        h1.addEventListener("click", function () {
+            alert("h1 was clicked!");
+        });
+
+        h1.addEventListener("click", function () {
+            h1.style.background = "orange";
+        });
+
         var p = document.querySelector("p");
         console.log(p.classList);
         // p.classList.add("big");
@@ -51,6 +59,32 @@
         console.log(ul.textContent);
         console.log(ul.innerHTML);
 
+        // ul.addEventListener("click", function () {
+        //     alert("YOU CLICKED THE UL!");
+        // })
+
+
+        // var lis = document.querySelectorAll("li");
+
+        // for (var i = 0; i < lis.length; i++) {
+        //     lis[i].addEventListener("click", function() {
+        //         this.style.color = "pink";
+        //     })
+        // }
+
+        var lis = document.querySelectorAll("li");
+
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].addEventListener("click", changeColorToRed
+            );
+        }
+
+        function changeColorToRed() {
+            this.style.color = "red";
+        }
+
+
+
         // document.querySelector("h1").textContent= "END OF THIS LESSON！";
 
         // console.log(document.body.innerHTML);
@@ -64,7 +98,7 @@
         console.log(img1.getAttribute("src"));
         console.log(img1.setAttribute("src", "https://i2.hdslb.com/bfs/archive/02171ee37277947116c5c47cd7f624fa06035756.jpg@380w_240h_100Q_1c.webp"));
 
-        
+
         var a = document.querySelector("a");
         a.textContent = "LINK TO BING.COM";
         a.setAttribute("href", "http://www.bing.com");

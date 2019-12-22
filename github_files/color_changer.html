@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    
+    </style>
+    <title>Color Toggle</title>
+</head>
+
+<body>
+    <button>CLICK ME</button>
+
+
+    <script>
+        var button = document.querySelector("button");
+        // h1.style.color = "yellow";
+        // h1.style.border = "5px solid pink";
+
+        button.addEventListener("click", function () {
+            if(document.body.style.background === "purple") {
+                document.body.style.background = "white";
+            } else {
+                document.body.style.background = "purple";
+            }
+            
+        });
+
+
+    </script>
+</body>
+
+</html>

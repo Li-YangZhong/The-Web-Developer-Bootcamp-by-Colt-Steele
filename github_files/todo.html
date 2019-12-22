@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .done {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .selected {
+            color: green;
+        }
+    </style>
+    <title>Todo List Demo</title>
+</head>
+
+<body>
+    <ul>
+        <li>Wash Cat</li>
+        <li>Feed Cat</li>
+        <li>Feed Cat to Dog</li>
+    </ul>
+
+
+    <script>
+
+        var lis = document.querySelectorAll("li");
+
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].addEventListener("mouseover", function () {
+                this.classList.add("selected");
+            });
+            lis[i].addEventListener("mouseout", function () {
+                this.classList.remove("selected");
+            });
+
+            lis[i].addEventListener("click", function() {
+                this.classList.toggle("done");
+            });
+
+        }
+
+
+        // firstLI.addEventListener("mouseover", function() {
+        //     firstLI.style.color = "green";
+        // })
+
+        // firstLI.addEventListener("mouseout", function() {
+        //     firstLI.style.color = "black";
+
+    </script>
+</body>
+
+</html>
